@@ -22,7 +22,8 @@ required = true
 mode = "cluster"
 
 [push]
-enabled = false
+enabled = true
+branch = "main"
 
 [capabilities]
-network_push = false
+network_push = true
