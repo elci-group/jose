@@ -25,5 +25,8 @@ mode = "cluster"
 enabled = true
 branch = "main"
 
+[push.safety]
+protect_branches = []
+
 [capabilities]
 network_push = true
