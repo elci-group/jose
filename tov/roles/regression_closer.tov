@@ -1,0 +1,27 @@
+// Tov policy data reference. Rust remains the authoritative enforcement layer.
+export type RegressionCloserPolicy = {
+  version: int,
+  minCapability: int,
+  expectedBudget: int,
+  permitted: string[],
+  forbidden: string[],
+  requiredContext: string[],
+  successGates: string[],
+  escalationConditions: string[],
+}
+
+export const regressionCloser: RegressionCloserPolicy = {
+  version: 1,
+  minCapability: 60,
+  expectedBudget: 20000,
+  permitted: ["inspect_touched_files", "edit_implementation", "run_target_tests"],
+  forbidden: ["public_api_change", "dependency_replacement", "unrelated_refactor"],
+  requiredContext: ["failing_test", "accepted_invariants"],
+  successGates: ["target_tests_pass", "parity_tests_unchanged", "unrelated_diff_zero"],
+  escalationConditions: ["public_interface_change_required"],
+}
+
+test("bounded role has explicit scope and gates", () => {
+  expect(regressionCloser.forbidden.length).toBe(3)
+  expect(regressionCloser.successGates.length).toBe(3)
+})

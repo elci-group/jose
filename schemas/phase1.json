@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elci.dev/jose/phase1.schema.json",
+  "title": "Jose Phase I state",
+  "type": "object",
+  "required": ["schema_version", "policy_version", "players", "profiles", "roles", "evidence", "events"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "policy_version": {"type": "string"},
+    "players": {"type": "object"},
+    "profiles": {"type": "object"},
+    "roles": {"type": "object"},
+    "evidence": {"type": "object"},
+    "events": {"type": "array", "items": {"type": "object", "required": ["sequence", "timestamp", "trace_id", "player", "task", "policy_version", "evidence", "decision", "reason_code"]}}
+  }
+}

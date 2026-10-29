@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "task_class": "bounded_regression",
+  "note": "Illustrative data only; not a Jose efficacy result. Each cold/managed pair shares pair_id.",
+  "outcomes": [
+    {"trial_id":"cold-001","pair_id":"case-001","condition":"COLD","closed":false,"verifier_agreement":false,"false_close":false,"regression":false,"input_tokens":1200,"output_tokens":320,"latency_ms":18000,"cost_microunits":100,"human_interventions":0},
+    {"trial_id":"managed-001","pair_id":"case-001","condition":"MANAGED","closed":true,"verifier_agreement":true,"false_close":false,"regression":false,"input_tokens":900,"output_tokens":250,"latency_ms":15000,"cost_microunits":75,"human_interventions":0}
+  ]
+}

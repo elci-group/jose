@@ -1,0 +1,28 @@
+repo_path = "."
+
+[watch]
+path = "."
+recursive = true
+ignore_file = ".kaptainignore"
+
+[cluster]
+window = 5
+
+[trust]
+execution = "trusted"
+
+[operation]
+mode = "actuate"
+
+[test]
+command = "cargo test"
+required = true
+
+[staging]
+mode = "cluster"
+
+[push]
+enabled = false
+
+[capabilities]
+network_push = false

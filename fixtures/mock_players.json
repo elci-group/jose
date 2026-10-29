@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "players": [
+    {"provider":"mock","model":"regression-specialist","endpoint":"local://mock","quantisation":null,"context_configuration":"curated-v1","tool_configuration":"bounded-write","reasoning_configuration":"standard","organisation_policy":"local","role":"regression_closer","cold_close_rate":0.4,"warm_close_rate":0.8}
+  ]
+}
